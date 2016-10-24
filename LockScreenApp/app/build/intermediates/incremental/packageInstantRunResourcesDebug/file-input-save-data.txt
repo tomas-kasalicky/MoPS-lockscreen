@@ -1,21 +1,21 @@
 #Internal package file, do not edit.
-#Sun Oct 23 21:42:50 EDT 2016
-2.base=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
-5.file=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_lockscreen.xml
+#Sun Oct 23 21:48:14 EDT 2016
+2.base=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
+5.file=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
 5.set=ANDROID_RESOURCE
-3.base=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.base=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
 2.set=ANDROID_RESOURCE
-4.base=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.base=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
 count=6
-0.file=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\resources.arsc
-5.base=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
+0.file=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\activity_lockscreen.xml
+5.base=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
 4.set=ANDROID_RESOURCE
-1.file=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\ic_launcher.png
+1.file=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
 1.set=ANDROID_RESOURCE
-2.file=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\selector_txt_btn_unlock.xml
-0.base=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
-3.file=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+2.file=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\selector_bg_btn_unlock.xml
+0.base=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
+3.file=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\color\\selector_txt_btn_unlock.xml
 3.set=ANDROID_RESOURCE
-1.base=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
-4.file=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\selector_bg_btn_unlock.xml
+1.base=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_
+4.file=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-xxhdpi-v4\\ic_launcher.png
 0.set=ANDROID_RESOURCE

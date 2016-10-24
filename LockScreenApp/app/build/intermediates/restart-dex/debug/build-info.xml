@@ -5,32 +5,32 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="156311278350074"
+    timestamp="156631621473133"
     token="1558901954699406614"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="440" />
+        duration="2929" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="260" />
+        duration="853" />
     <task
         name="verifier"
-        duration="41" />
+        duration="857" />
 
     <artifact
-        location="C:\Users\kasal\OneDrive\Work\android\LockScreenApp\app\build\outputs\apk\app-debug.apk"
+        location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="156311278350074"
+        timestamp="156631621473133"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\kasal\OneDrive\Work\android\LockScreenApp\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
 
