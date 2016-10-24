@@ -1,0 +1,7 @@
+#Sun Oct 23 21:43:08 EDT 2016
+base.0=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_ce4b25f0748783c0f5a4b7ba6a8bf9e8c02cd14d
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_7f37d51b59e8bf9ccb2bb584c30fc8024c99da88\\classes.dex
+base.1=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_7f37d51b59e8bf9ccb2bb584c30fc8024c99da88
+file.0=C\:\\Users\\kasal\\OneDrive\\Work\\android\\LockScreenApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_ce4b25f0748783c0f5a4b7ba6a8bf9e8c02cd14d\\classes.dex
