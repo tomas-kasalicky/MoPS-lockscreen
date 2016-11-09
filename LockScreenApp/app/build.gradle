@@ -5,9 +5,9 @@ android {
     buildToolsVersion "23.0.3"
 
     defaultConfig {
-        applicationId "com.mehuljoisar.lockscreen"
-        minSdkVersion 8
-        targetSdkVersion 8
+        applicationId "ca.uwaterloo.lockscreen"
+        minSdkVersion 11
+        targetSdkVersion 11
     }
 
     buildTypes {
@@ -20,4 +20,5 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:22.2.1'
+    compile 'com.android.support:appcompat-v7:22.2.1'
 }

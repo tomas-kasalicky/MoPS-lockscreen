@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="839469fb9a1f87e161a3804e43123375ceb3b7cc">
+        sha1="e0f79dcfde265e12209fa487e2c22b1c68c2b093">
         <dex dex="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_eeda438992a22c19486e43d9397ea774e7d0cfa9\classes.dex" />
     </item>
     <item
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="fc9868a4c3cc7f22077ad8f49adaa4d95b63a415">
+        sha1="918c9fbab54207e7e85f4d5696be9486ffd19903">
         <dex dex="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0df7fd4b96978bfe7d36e340963307016ce7c148\classes.dex" />
     </item>
     <item
@@ -45,6 +45,15 @@
         revision="23.0.3"
         sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
         <dex dex="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.1_c1e5027cf78778edcd110122718866055158e0f1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.3"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_1a50e7c73bc86642abe0472e5f052662eecd57c8\classes.dex" />
     </item>
 
 </items>

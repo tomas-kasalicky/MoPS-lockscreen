@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:2:1-44:12
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:2:1-57:12
 	package
 		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:3:5-38
 		INJECTED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml
@@ -16,13 +16,14 @@ ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\
 	xmlns:android
 		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:7:5-43
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:7:5-44
+MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
 		INJECTED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:7:15-40
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:7:15-41
 		INJECTED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.DISABLE_KEYGUARD
@@ -45,27 +46,32 @@ uses-permission#android.permission.SYSTEM_ALERT_WINDOW
 ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:13:5-78
 	android:name
 		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:13:22-75
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:14:5-81
+	android:name
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:14:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:15:5-80
+	android:name
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:15:22-77
 application
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:15:5-42:19
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:17:5-55:19
+MERGED from [com.android.support:appcompat-v7:22.2.1] C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:22.2.1] C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:17:9-41
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:19:9-41
 	android:icon
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:16:9-45
-activity#ca.uwaterloo.lockscreen.LockScreenActivity
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:18:9-30:20
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:18:9-45
+activity#ca.uwaterloo.lockscreen.StartupActivity
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:20:9-30:20
 	android:screenOrientation
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:23:13-49
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:24:13-49
 	android:label
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:21:13-45
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:23:13-45
 	android:excludeFromRecents
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:20:13-46
-	android:launchMode
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:22:13-44
-	android:theme
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:24:13-71
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:22:13-46
 	android:name
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:19:13-70
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:21:13-44
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
 ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:25:13-29:29
 action#android.intent.action.MAIN
@@ -76,19 +82,43 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:28:17-77
 	android:name
 		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:28:27-74
+activity#ca.uwaterloo.lockscreen.LockScreenActivity
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:31:9-37:83
+	android:screenOrientation
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:36:13-49
+	android:label
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:34:13-45
+	android:excludeFromRecents
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:33:13-46
+	android:launchMode
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:35:13-44
+	android:theme
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:37:13-71
+	android:name
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:32:13-47
 service#ca.uwaterloo.lockscreen.utils.LockscreenService
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:32:9-33:19
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:39:9-60
 	android:name
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:32:18-80
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:39:18-57
 receiver#ca.uwaterloo.lockscreen.utils.LockscreenIntentReceiver
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:35:9-41:20
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:41:9-47:20
 	android:enabled
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:37:13-35
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:43:13-35
 	android:name
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:36:13-82
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:42:13-59
 intent-filter#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:38:13-40:29
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:44:13-46:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:39:17-79
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:45:17-79
 	android:name
-		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:39:25-76
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:45:25-76
+activity#ca.uwaterloo.lockscreen.SetupActivity
+ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:49:9-54:20
+	android:screenOrientation
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:52:13-49
+	android:label
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:51:13-45
+	android:excludeFromRecents
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:50:13-46
+	android:name
+		ADDED from C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\src\main\AndroidManifest.xml:49:19-48

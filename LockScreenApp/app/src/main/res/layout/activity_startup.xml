@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    a:orientation="vertical"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:gravity="center">
+
+    <Button
+        a:id="@+id/setupBtn"
+        a:text="Setup Lock"
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content" />
+    <Button
+        a:id="@+id/lockBtn"
+        a:text="Lock Device"
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content" />
+    <Button
+        a:id="@+id/lockObfBtn"
+        a:text="Lock With Obfuscated Pictures"
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content" />
+
+</LinearLayout>

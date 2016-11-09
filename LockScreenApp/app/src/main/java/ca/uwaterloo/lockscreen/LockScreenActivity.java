@@ -10,11 +10,11 @@ import android.telephony.TelephonyManager;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.RelativeLayout;
 
-import ca.uwaterloo.lockscreen.R;
-
+import ca.uwaterloo.lockscreen.control.SwipeImageView;
+import ca.uwaterloo.lockscreen.imagelock.ImageUnlocker;
+import ca.uwaterloo.lockscreen.imagelock.ResourceHelper;
 import ca.uwaterloo.lockscreen.utils.LockscreenService;
 import ca.uwaterloo.lockscreen.utils.LockscreenUtils;
 
@@ -24,12 +24,10 @@ public class LockScreenActivity extends Activity implements
 	public WindowManager winManager;
 	public RelativeLayout wrapperView;
 
-	// User-interface
-	private Button btnUnlock;
-
 	// Member variables
 	private LockscreenUtils mLockscreenUtils;
     private WindowManager.LayoutParams localLayoutParams;
+    private SwipeImageView swipeLock;
 
     // Set appropriate flags to make the screen appear over the keyguard
 	@Override
@@ -104,17 +102,15 @@ public class LockScreenActivity extends Activity implements
         View.inflate(this, R.layout.activity_lockscreen, this.wrapperView);
         this.winManager.addView(this.wrapperView, localLayoutParams);
 
-        // add unlock button handler
 		mLockscreenUtils = new LockscreenUtils();
-		btnUnlock = (Button) wrapperView.findViewById(R.id.btnUnlock);
-		btnUnlock.setOnClickListener(new View.OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
-				// unlock home button and then screen on button press
-				unlockHomeButton();
-			}
-		});
+		swipeLock = (SwipeImageView) wrapperView.findViewById(R.id.swipeLock);
+        swipeLock.setActivity(this);
+
+        ImageUnlocker unlocker = new ImageUnlocker(ResourceHelper.createPrototypes(getResources()));
+
+        swipeLock.setImageProvider(unlocker);
+
 	}
 
 	// Handle events of calls and unlock screen if necessary
@@ -192,7 +188,7 @@ public class LockScreenActivity extends Activity implements
 	@Override
 	public void onLockStatusChanged(boolean isLocked) {
 		if (!isLocked) {
-			unlockDevice();
+			finish();
 		}
 	}
 
@@ -215,11 +211,6 @@ public class LockScreenActivity extends Activity implements
 		KeyguardManager.KeyguardLock mKL = mKM.newKeyguardLock("IN");
 		mKL.reenableKeyguard();
 	}
-	
-	//Simply unlock device by finishing the activity
-	private void unlockDevice()
-	{
-		finish();
-	}
+
 
 }
