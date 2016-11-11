@@ -10,6 +10,8 @@ import ca.uwaterloo.lockscreen.imagelock.ResourceHelper;
 
 public class SetupActivity extends Activity {
 
+    private LockSetup unlocker;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,7 +19,15 @@ public class SetupActivity extends Activity {
 
         SwipeImageView swipeView = (SwipeImageView) findViewById(R.id.swipeSetup);
         swipeView.setActivity(this);
-        LockSetup unlocker = new LockSetup(ResourceHelper.createPrototypes(getResources()));
+        unlocker = new LockSetup(ResourceHelper.createPrototypes(getResources(), this));
         swipeView.setImageProvider(unlocker);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+        ResourceHelper.SavePreferences(unlocker.prototypes,this);
+        unlocker.dispose();
     }
 }

@@ -57,7 +57,11 @@ public class ImageUnlocker implements ImageProvider{
 
     public Bitmap getCurrentImage() {
 
-        return getCurrentPrototype().getImage(obfuscate);
+        ImagePrototype img = getCurrentPrototype();
+        if(img == null){
+            return null;
+        }
+        return img.getImage(obfuscate);
     }
 
     public Bitmap getNextImage() {
@@ -100,6 +104,9 @@ public class ImageUnlocker implements ImageProvider{
     }
 
     private ImagePrototype getCurrentPrototype() {
+        if(currentSequenceIndex >= currentSequence.size()){
+            return null;
+        }
         return prototypes.get( currentSequence.get(currentSequenceIndex) );
     }
     private ImagePrototype getNextPrototype() {
@@ -115,8 +122,14 @@ public class ImageUnlocker implements ImageProvider{
     }
 
 
+    public void dispose(){
+        for (ImagePrototype img: prototypes) {
+            img.dispose();
+        }
+    }
 
     public class ImageUnlockFailedException extends Throwable {
+
 
     }
 }

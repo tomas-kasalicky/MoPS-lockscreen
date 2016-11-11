@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="e0f79dcfde265e12209fa487e2c22b1c68c2b093">
+        sha1="fe15ac8789a7b2aef635592ae9775d8f9b2b2bf9">
         <dex dex="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_eeda438992a22c19486e43d9397ea774e7d0cfa9\classes.dex" />
     </item>
     <item
@@ -34,7 +34,7 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.3"
-        sha1="918c9fbab54207e7e85f4d5696be9486ffd19903">
+        sha1="bd2eef25471d95e9400fc10142f6d990c5642b63">
         <dex dex="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_0df7fd4b96978bfe7d36e340963307016ce7c148\classes.dex" />
     </item>
     <item

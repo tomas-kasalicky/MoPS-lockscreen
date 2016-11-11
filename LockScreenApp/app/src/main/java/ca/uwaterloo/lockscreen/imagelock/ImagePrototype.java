@@ -16,6 +16,8 @@ import ca.uwaterloo.lockscreen.utils.RandomHelper;
 
 public class ImagePrototype {
 
+    public final int Id;
+
     private final ObfuscatedImagePair[] imageData;
     private int currentImage;
 
@@ -34,18 +36,25 @@ public class ImagePrototype {
 
     public DROP_AREA unlockArea;
 
-    public ImagePrototype(ObfuscatedImagePair[] imageData, DROP_AREA unlockArea){
+    public ImagePrototype(ObfuscatedImagePair[] imageData, DROP_AREA unlockArea, int id){
         this.unlockArea = unlockArea;
         this.imageData = imageData;
+        this.Id = id;
         shuffleImages();
     }
 
     public boolean isCorrectDropArea(DROP_AREA dropArea) {
-        return unlockArea == dropArea;
+        return unlockArea == dropArea || unlockArea == DROP_AREA.NONE;
     }
 
     public void shuffleImages() {
         currentImage = RandomHelper.randInt(0, imageData.length);
+    }
+
+    public void dispose(){
+        for (ObfuscatedImagePair img: imageData) {
+            img.dispose();
+        }
     }
 
 }

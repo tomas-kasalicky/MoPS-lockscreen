@@ -28,8 +28,9 @@ public class LockScreenActivity extends Activity implements
 	private LockscreenUtils mLockscreenUtils;
     private WindowManager.LayoutParams localLayoutParams;
     private SwipeImageView swipeLock;
+	private ImageUnlocker unlocker;
 
-    // Set appropriate flags to make the screen appear over the keyguard
+	// Set appropriate flags to make the screen appear over the keyguard
 	@Override
 	public void onAttachedToWindow() {
 		this.getWindow().setType(
@@ -107,7 +108,7 @@ public class LockScreenActivity extends Activity implements
 		swipeLock = (SwipeImageView) wrapperView.findViewById(R.id.swipeLock);
         swipeLock.setActivity(this);
 
-        ImageUnlocker unlocker = new ImageUnlocker(ResourceHelper.createPrototypes(getResources()));
+        unlocker = new ImageUnlocker(ResourceHelper.createPrototypes(getResources(), this));
 
         swipeLock.setImageProvider(unlocker);
 
@@ -195,7 +196,8 @@ public class LockScreenActivity extends Activity implements
 	@Override
 	protected void onStop() {
 		super.onStop();
-		//unlockHomeButton();
+		unlockHomeButton();
+		unlocker.dispose();
 	}
 
 	@SuppressWarnings("deprecation")

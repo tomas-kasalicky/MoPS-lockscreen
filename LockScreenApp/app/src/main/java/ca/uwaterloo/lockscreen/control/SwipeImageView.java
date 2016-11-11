@@ -10,6 +10,7 @@ import android.graphics.Point;
 import android.graphics.PointF;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
 import android.text.format.Time;
 import android.util.AttributeSet;
@@ -18,6 +19,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import ca.uwaterloo.lockscreen.LockScreenActivity;
+import ca.uwaterloo.lockscreen.R;
 import ca.uwaterloo.lockscreen.imagelock.ImagePrototype;
 import ca.uwaterloo.lockscreen.imagelock.ImageProvider;
 import ca.uwaterloo.lockscreen.imagelock.ImageUnlocker;
@@ -39,6 +41,10 @@ public class SwipeImageView extends ImageView {
     private PointF offset;
     private ImageProvider imgProvider;
     private Activity activity;
+    private Drawable smile1;
+    private Drawable smile2;
+    private Drawable sad1;
+    private Drawable sad2;
 
     public SwipeImageView(Context context) {
         super(context);
@@ -64,6 +70,11 @@ public class SwipeImageView extends ImageView {
         this.context = context;
         offset = new PointF(0,0);
         showErrorTime.set(0);
+
+        smile1 = context.getResources().getDrawable(R.drawable.smile1);
+        smile2 = context.getResources().getDrawable(R.drawable.smile2);
+        sad1 = context.getResources().getDrawable(R.drawable.sad1);
+        sad2 = context.getResources().getDrawable(R.drawable.sad2);
     }
 
     public void setImageProvider(ImageProvider unlocker){
@@ -83,6 +94,10 @@ public class SwipeImageView extends ImageView {
 
         Bitmap image = imgProvider.getCurrentImage();
         Bitmap nextImage = imgProvider.getNextImage();
+
+        if(image == null) {
+            return;
+        }
 
         Point adjustedOffset = new Point();
         adjustedOffset.x = (int)offset.x;
@@ -124,6 +139,24 @@ public class SwipeImageView extends ImageView {
                         canvas.getWidth() + adjustedOffset.x,canvas.getHeight() + adjustedOffset.y),
                 paint);
 
+
+
+        int emojiSize = canvas.getWidth() / 5;
+        int emojiTop = emojiSize / 4;
+        int emojiLeft = canvas.getWidth() / 2 - emojiSize / 2;
+        smile2.setBounds(emojiLeft, emojiTop, emojiLeft + emojiSize, emojiTop + emojiSize);
+        sad2.setBounds(emojiLeft, canvas.getHeight() - emojiSize - emojiTop, emojiLeft + emojiSize, canvas.getHeight() - emojiTop );
+
+        smile2.draw(canvas);
+        sad2.draw(canvas);
+
+        emojiTop = canvas.getHeight() / 2 - emojiSize / 3;
+        emojiLeft = emojiSize / 4;
+        sad1.setBounds(emojiLeft, emojiTop, emojiLeft + emojiSize, emojiTop + emojiSize);
+        smile1.setBounds(canvas.getWidth() - emojiSize - emojiLeft, emojiTop, canvas.getWidth() - emojiLeft, emojiTop + emojiSize);
+
+        smile1.draw(canvas);
+        sad1.draw(canvas);
 
 
         Time currTime = new Time();
@@ -189,5 +222,6 @@ public class SwipeImageView extends ImageView {
         invalidate();
         return true;
     }
+
 
 }

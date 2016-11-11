@@ -15,7 +15,7 @@ import java.util.List;
 
 public class LockSetup implements ImageProvider {
 
-    private List<ImagePrototype> prototypes;
+    public List<ImagePrototype> prototypes;
     private int currentIndex;
 
     public LockSetup(List<ImagePrototype> prototypes) {
@@ -29,7 +29,11 @@ public class LockSetup implements ImageProvider {
 
     public Bitmap getCurrentImage() {
 
-        return getCurrentPrototype().getImage(false);
+        ImagePrototype img = getCurrentPrototype();
+        if(img == null){
+            return null;
+        }
+        return img.getImage(false);
     }
 
     public Bitmap getNextImage() {
@@ -47,10 +51,15 @@ public class LockSetup implements ImageProvider {
         }
         prototypes.get(currentIndex).unlockArea = dropArea;
         currentIndex++;
+
     }
 
     private ImagePrototype getCurrentPrototype() {
-        return prototypes.get(currentIndex);
+        if (currentIndex < prototypes.size()) {
+            return prototypes.get(currentIndex);
+        } else {
+            return null;
+        }
     }
 
     private ImagePrototype getNextPrototype() {
@@ -63,6 +72,12 @@ public class LockSetup implements ImageProvider {
 
     public boolean isFinished() {
         return currentIndex == prototypes.size();
+    }
+
+    public void dispose(){
+        for (ImagePrototype img: prototypes) {
+            img.dispose();
+        }
     }
 
 }

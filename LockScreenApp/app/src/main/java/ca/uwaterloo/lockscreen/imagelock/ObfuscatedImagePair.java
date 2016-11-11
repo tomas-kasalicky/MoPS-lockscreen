@@ -9,12 +9,21 @@ import android.graphics.BitmapFactory;
  */
 
 
-public class ObfuscatedImagePair{
+public class ObfuscatedImagePair {
     public final Bitmap clearImage;
     public final Bitmap obfuscatedImage;
 
     public ObfuscatedImagePair(Resources res, int clearId, int obfuscatedId){
         clearImage = BitmapFactory.decodeResource(res, clearId);
         obfuscatedImage = BitmapFactory.decodeResource(res, obfuscatedId);
+    }
+
+    public void dispose(){
+        if(!clearImage.isRecycled()) {
+            clearImage.recycle();
+        }
+        if(!obfuscatedImage.isRecycled()) {
+            obfuscatedImage.recycle();
+        }
     }
 }
