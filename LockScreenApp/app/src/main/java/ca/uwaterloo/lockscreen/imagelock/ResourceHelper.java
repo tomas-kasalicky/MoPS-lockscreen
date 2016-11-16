@@ -21,22 +21,81 @@ public class ResourceHelper {
 
         ImagePrototype prot = new ImagePrototype(
                 new ObfuscatedImagePair[]{
-                        new ObfuscatedImagePair(res, R.drawable.pizza,R.drawable.pizza_obf)
+                        new ObfuscatedImagePair(res, R.drawable.pizza,R.drawable.pizza_obf),
+                        new ObfuscatedImagePair(res, R.drawable.pizza1,R.drawable.pizza1_obf),
+                        new ObfuscatedImagePair(res, R.drawable.pizza2,R.drawable.pizza2_obf),
+                        new ObfuscatedImagePair(res, R.drawable.pizza3,R.drawable.pizza3_obf),
+                        new ObfuscatedImagePair(res, R.drawable.pizza4,R.drawable.pizza4_obf)
                 },
                 ImagePrototype.DROP_AREA.NONE,
-                R.drawable.pizza);
-        ImagePrototype prot2 = new ImagePrototype(
+                new int[]{
+                        R.drawable.pizza,
+                        R.drawable.pizza1,
+                        R.drawable.pizza2,
+                        R.drawable.pizza3,
+                        R.drawable.pizza4
+                },new int[]{
+                R.drawable.pizza_obf,
+                R.drawable.pizza1_obf,
+                R.drawable.pizza2_obf,
+                R.drawable.pizza3_obf,
+                R.drawable.pizza4_obf
+        });
+        prototypes.add(prot);
+
+        prot = new ImagePrototype(
                 new ObfuscatedImagePair[]{
-                        new ObfuscatedImagePair(res,R.drawable.skyline,R.drawable.skyline_obf)
+                        new ObfuscatedImagePair(res, R.drawable.bmw,R.drawable.bmw_obf),
+                        new ObfuscatedImagePair(res, R.drawable.bmw1,R.drawable.bmw1_obf),
+                        new ObfuscatedImagePair(res, R.drawable.bmw2,R.drawable.bmw2_obf)
                 },
                 ImagePrototype.DROP_AREA.NONE,
-                R.drawable.skyline);
-
+                new int[]{
+                        R.drawable.bmw,
+                        R.drawable.bmw1,
+                        R.drawable.bmw2
+                },new int[]{
+                R.drawable.bmw_obf,
+                R.drawable.bmw1_obf,
+                R.drawable.bmw2_obf
+        });
         prototypes.add(prot);
-        prototypes.add(prot2);
-        prototypes.add(prot);
-        prototypes.add(prot2);
 
+        prot = new ImagePrototype(
+                new ObfuscatedImagePair[]{
+                        new ObfuscatedImagePair(res, R.drawable.coffee,R.drawable.coffee_obf),
+                        new ObfuscatedImagePair(res, R.drawable.coffee1,R.drawable.coffee1_obf),
+                        new ObfuscatedImagePair(res, R.drawable.coffee2,R.drawable.coffee2_obf),
+                        new ObfuscatedImagePair(res, R.drawable.coffee3,R.drawable.coffee3_obf),
+                },
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.coffee,
+                        R.drawable.coffee1,
+                        R.drawable.coffee2,
+                        R.drawable.coffee3,
+                },new int[]{
+                R.drawable.coffee_obf,
+                R.drawable.coffee1_obf,
+                R.drawable.coffee2_obf,
+                R.drawable.coffee3_obf,
+        });
+        prototypes.add(prot);
+
+        prot = new ImagePrototype(
+                new ObfuscatedImagePair[]{
+                    new ObfuscatedImagePair(res, R.drawable.roses,R.drawable.roses_obf),
+                    new ObfuscatedImagePair(res, R.drawable.roses1,R.drawable.roses1_obf),
+                },
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                    R.drawable.roses,
+                    R.drawable.roses1,
+                },new int[]{
+                    R.drawable.roses_obf,
+                    R.drawable.roses1_obf,
+            });
+        prototypes.add(prot);
 
         prototypes = ApplyPreferences(prototypes, act);
 
@@ -47,7 +106,7 @@ public class ResourceHelper {
         SharedPreferences pref = act.getSharedPreferences("ca.uwaterloo.lockscreen", Context.MODE_PRIVATE);
 
         for (ImagePrototype img : prototypes) {
-            img.unlockArea = toDROP_AREA(pref.getInt(Integer.toString(img.Id), toInt(ImagePrototype.DROP_AREA.NONE)));
+            img.unlockArea = toDROP_AREA(pref.getInt(Integer.toString(img.Id[0]), toInt(ImagePrototype.DROP_AREA.NONE)));
         }
 
         return prototypes;
@@ -60,7 +119,7 @@ public class ResourceHelper {
         SharedPreferences.Editor ed = pref.edit();
 
         for (ImagePrototype img : prototypes) {
-            ed.putInt(Integer.toString(img.Id), toInt(img.unlockArea));
+            ed.putInt(Integer.toString(img.Id[0]), toInt(img.unlockArea));
         }
 
         ed.apply();

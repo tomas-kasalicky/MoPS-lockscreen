@@ -16,7 +16,8 @@ import ca.uwaterloo.lockscreen.utils.RandomHelper;
 
 public class ImagePrototype {
 
-    public final int Id;
+    public final int[] Id;
+    public final int[] ObfuscatedId;
 
     private final ObfuscatedImagePair[] imageData;
     private int currentImage;
@@ -36,10 +37,11 @@ public class ImagePrototype {
 
     public DROP_AREA unlockArea;
 
-    public ImagePrototype(ObfuscatedImagePair[] imageData, DROP_AREA unlockArea, int id){
+    public ImagePrototype(ObfuscatedImagePair[] imageData, DROP_AREA unlockArea, int[] id, int[] obfuscatedId){
         this.unlockArea = unlockArea;
         this.imageData = imageData;
         this.Id = id;
+        this.ObfuscatedId = obfuscatedId;
         shuffleImages();
     }
 

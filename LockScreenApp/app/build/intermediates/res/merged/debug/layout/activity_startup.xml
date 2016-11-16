@@ -11,6 +11,11 @@
         a:layout_width="wrap_content"
         a:layout_height="wrap_content" />
     <Button
+        a:id="@+id/browseBtn"
+        a:text="Browse images"
+        a:layout_width="wrap_content"
+        a:layout_height="wrap_content" />
+    <Button
         a:id="@+id/lockBtn"
         a:text="Lock Device"
         a:layout_width="wrap_content"

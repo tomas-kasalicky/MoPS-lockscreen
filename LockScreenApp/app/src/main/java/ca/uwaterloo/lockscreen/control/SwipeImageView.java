@@ -14,11 +14,12 @@ import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
 import android.text.format.Time;
 import android.util.AttributeSet;
+import android.view.GestureDetector;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import ca.uwaterloo.lockscreen.LockScreenActivity;
 import ca.uwaterloo.lockscreen.R;
 import ca.uwaterloo.lockscreen.imagelock.ImagePrototype;
 import ca.uwaterloo.lockscreen.imagelock.ImageProvider;
@@ -28,7 +29,7 @@ import ca.uwaterloo.lockscreen.imagelock.ImageUnlocker;
  * Created by kasal on 07.11.2016.
  */
 
-public class SwipeImageView extends ImageView {
+public class SwipeImageView extends ImageView implements View.OnTouchListener {
 
 
 
@@ -45,6 +46,8 @@ public class SwipeImageView extends ImageView {
     private Drawable smile2;
     private Drawable sad1;
     private Drawable sad2;
+    private GestureDetector gestureDetector;
+
 
     public SwipeImageView(Context context) {
         super(context);
@@ -70,6 +73,8 @@ public class SwipeImageView extends ImageView {
         this.context = context;
         offset = new PointF(0,0);
         showErrorTime.set(0);
+
+        gestureDetector = new GestureDetector(context, new GestureListener());
 
         smile1 = context.getResources().getDrawable(R.drawable.smile1);
         smile2 = context.getResources().getDrawable(R.drawable.smile2);
@@ -103,7 +108,7 @@ public class SwipeImageView extends ImageView {
         adjustedOffset.x = (int)offset.x;
         adjustedOffset.y = (int)offset.y;
 
-        if(Math.abs(offset.y) > 0.45 * canvas.getHeight()){
+        if(Math.abs(offset.y) > 0.28 * canvas.getHeight()){
             adjustedOffset.y = canvas.getHeight() * 4 / 5;
             currentDropArea = ImagePrototype.DROP_AREA.BOTTOM;
             if(offset.y < 0){
@@ -111,7 +116,7 @@ public class SwipeImageView extends ImageView {
                 currentDropArea = ImagePrototype.DROP_AREA.TOP;
             }
             adjustedOffset.x = 0;
-        }else if(Math.abs(offset.x) > 0.4 * canvas.getWidth()){
+        }else if(Math.abs(offset.x) > 0.35 * canvas.getWidth()){
             adjustedOffset.x = canvas.getWidth() * 4 / 5;
             currentDropArea = ImagePrototype.DROP_AREA.RIGHT;
             if(offset.x < 0){
@@ -125,13 +130,13 @@ public class SwipeImageView extends ImageView {
 
         Paint paint = new Paint();
 
-        if(nextImage != null){
+        /*if(nextImage != null){
             canvas.drawBitmap(
                     nextImage,
                     new Rect(0,0,nextImage.getWidth(),nextImage.getHeight()),
                     new Rect(0,0,canvas.getWidth(),canvas.getHeight()),
                     paint);
-        }
+        }*/
         canvas.drawBitmap(
                 image,
                 new Rect(0,0,image.getWidth(),image.getHeight()),
@@ -197,31 +202,97 @@ public class SwipeImageView extends ImageView {
             }
         }else if(event.getAction() == MotionEvent.ACTION_UP){
 
-            try {
-                imgProvider.dropAreaSelected(currentDropArea);
-            } catch (ImageUnlocker.ImageUnlockFailedException e) {
-                showErrorTime.setToNow();
-                new CountDownTimer(Toast.LENGTH_LONG + 1000, Toast.LENGTH_LONG + 1000) {
-                    public void onTick(long millisUntilFinished) {
-                    }
-                    public void onFinish() {
-                        invalidate();
-                    }
-                }.start();
-
-            }
-
-            if(imgProvider.isFinished()){
-                activity.finish();
-            }
-
-            startDragPosition = null;
-            offset = new PointF(0,0);
-            currentDropArea = ImagePrototype.DROP_AREA.NONE;
+            gestureFinished();
         }
         invalidate();
         return true;
     }
 
+    private void gestureFinished() {
+        try {
+            imgProvider.dropAreaSelected(currentDropArea);
+        } catch (ImageUnlocker.ImageUnlockFailedException e) {
+            showErrorTime.setToNow();
+            new CountDownTimer(Toast.LENGTH_LONG + 1000, Toast.LENGTH_LONG + 1000) {
+                public void onTick(long millisUntilFinished) {
+                }
+                public void onFinish() {
+                    invalidate();
+                }
+            }.start();
+
+        }
+
+        if(imgProvider.isFinished()){
+            activity.finish();
+        }
+
+        startDragPosition = null;
+        offset = new PointF(0,0);
+        currentDropArea = ImagePrototype.DROP_AREA.NONE;
+    }
+
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        return gestureDetector.onTouchEvent(event);
+    }
+
+
+    private final class GestureListener extends GestureDetector.SimpleOnGestureListener {
+
+        private static final int SWIPE_THRESHOLD = 100;
+        private static final int SWIPE_VELOCITY_THRESHOLD = 100;
+
+
+
+        @Override
+        public boolean onDown(MotionEvent e) {
+            return true;
+        }
+
+        @Override
+        public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
+            boolean result = false;
+            try {
+                float diffY = e2.getY() - e1.getY();
+                float diffX = e2.getX() - e1.getX();
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    if (Math.abs(diffX) > SWIPE_THRESHOLD && Math.abs(velocityX) > SWIPE_VELOCITY_THRESHOLD) {
+                        if (diffX > 0) {
+                            onSwipeRight();
+                        } else {
+                            onSwipeLeft();
+                        }
+                    }
+                    result = true;
+                }
+                else if (Math.abs(diffY) > SWIPE_THRESHOLD && Math.abs(velocityY) > SWIPE_VELOCITY_THRESHOLD) {
+                    if (diffY > 0) {
+                        onSwipeBottom();
+                    } else {
+                        onSwipeTop();
+                    }
+                }
+                result = true;
+
+            } catch (Exception exception) {
+                exception.printStackTrace();
+            }
+            return result;
+        }
+    }
+
+    public void onSwipeRight() {
+    }
+
+    public void onSwipeLeft() {
+    }
+
+    public void onSwipeTop() {
+    }
+
+    public void onSwipeBottom() {
+    }
 
 }

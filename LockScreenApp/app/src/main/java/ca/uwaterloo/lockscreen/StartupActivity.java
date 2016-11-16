@@ -41,10 +41,23 @@ public class StartupActivity extends Activity {
                 setup();
             }
         });
+
+        Button browseButton = (Button) findViewById(R.id.browseBtn);
+        browseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                browse();
+            }
+        });
     }
 
     private void setup() {
         Intent intent = new Intent(this, SetupActivity.class);
+        startActivity(intent);
+    }
+
+    private void browse() {
+        Intent intent = new Intent(this, BrowseActivity.class);
         startActivity(intent);
     }
 
