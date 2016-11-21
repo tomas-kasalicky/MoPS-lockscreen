@@ -24,12 +24,13 @@ import ca.uwaterloo.lockscreen.R;
 import ca.uwaterloo.lockscreen.imagelock.ImagePrototype;
 import ca.uwaterloo.lockscreen.imagelock.ImageProvider;
 import ca.uwaterloo.lockscreen.imagelock.ImageUnlocker;
+import ca.uwaterloo.lockscreen.utils.Logger;
 
 /**
  * Created by kasal on 07.11.2016.
  */
 
-public class SwipeImageView extends ImageView implements View.OnTouchListener {
+public class SwipeImageView extends ImageView {
 
 
 
@@ -47,6 +48,7 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
     private Drawable sad1;
     private Drawable sad2;
     private GestureDetector gestureDetector;
+    private long startTime;
 
 
     public SwipeImageView(Context context) {
@@ -80,6 +82,8 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
         smile2 = context.getResources().getDrawable(R.drawable.smile2);
         sad1 = context.getResources().getDrawable(R.drawable.sad1);
         sad2 = context.getResources().getDrawable(R.drawable.sad2);
+
+        startTime = -1;
     }
 
     public void setImageProvider(ImageProvider unlocker){
@@ -190,6 +194,12 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if(startTime < 0){
+            startTime = System.currentTimeMillis();
+        }
+
+        boolean res = gestureDetector.onTouchEvent(event);
+
         if(event.getAction() == MotionEvent.ACTION_DOWN){
             startDragPosition = new PointF(event.getX(),event.getY());
         }else if(event.getAction() == MotionEvent.ACTION_MOVE){
@@ -205,13 +215,15 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
             gestureFinished();
         }
         invalidate();
-        return true;
+
+        return res;
     }
 
     private void gestureFinished() {
         try {
             imgProvider.dropAreaSelected(currentDropArea);
         } catch (ImageUnlocker.ImageUnlockFailedException e) {
+            Logger.log(context, "UNLOCK FAILED in: " + getCurrentTime() + ";");
             showErrorTime.setToNow();
             new CountDownTimer(Toast.LENGTH_LONG + 1000, Toast.LENGTH_LONG + 1000) {
                 public void onTick(long millisUntilFinished) {
@@ -224,6 +236,8 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
         }
 
         if(imgProvider.isFinished()){
+            Logger.log(context, "UNLOCKED in: " + getCurrentTime() + ";");
+            startTime = -1;
             activity.finish();
         }
 
@@ -232,10 +246,9 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
         currentDropArea = ImagePrototype.DROP_AREA.NONE;
     }
 
-
-    @Override
-    public boolean onTouch(View v, MotionEvent event) {
-        return gestureDetector.onTouchEvent(event);
+    public double getCurrentTime(){
+        double difference = System.currentTimeMillis() - startTime;
+        return difference / 1000;
     }
 
 
@@ -250,6 +263,7 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
         public boolean onDown(MotionEvent e) {
             return true;
         }
+
 
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
@@ -284,15 +298,23 @@ public class SwipeImageView extends ImageView implements View.OnTouchListener {
     }
 
     public void onSwipeRight() {
+        currentDropArea = ImagePrototype.DROP_AREA.RIGHT;
+        gestureFinished();
     }
 
     public void onSwipeLeft() {
+        currentDropArea = ImagePrototype.DROP_AREA.LEFT;
+        gestureFinished();
     }
 
     public void onSwipeTop() {
+        currentDropArea = ImagePrototype.DROP_AREA.TOP;
+        gestureFinished();
     }
 
     public void onSwipeBottom() {
+        currentDropArea = ImagePrototype.DROP_AREA.BOTTOM;
+        gestureFinished();
     }
 
 }

@@ -1,4 +1,4 @@
-#Tue Nov 15 22:55:13 EST 2016
+#Mon Nov 21 11:48:55 EST 2016
 base.0=C\:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_eeda438992a22c19486e43d9397ea774e7d0cfa9
 renamed.1=classes2.dex
 renamed.0=classes.dex

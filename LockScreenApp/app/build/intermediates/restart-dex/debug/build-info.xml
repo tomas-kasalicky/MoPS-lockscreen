@@ -1,64 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
+    abi="armeabi-v7a,armeabi"
     api-level="23"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="86217422947343"
+    timestamp="3331541009861"
     token="997996261963478444"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="459" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="40" />
+        duration="0" />
     <task
         name="verifier"
-        duration="1" />
-
-    <artifact
-        location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-        type="DEX" />
+        duration="0" />
 
     <build
-        timestamp="84913071738193"
-        verifier="BINARY_MANIFEST_FILE_CHANGE" >
+        timestamp="1726404575895"
+        verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="85172211723635"
+        timestamp="2217411872097"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="3210912527690"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="3287958261843"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="85981531513007"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
-    </build>
+        timestamp="3331541009861"
+        verifier="COLD_SWAP_REQUESTED" />
     <build
-        timestamp="86101108427959"
+        timestamp="6220788416971"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
-            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="86217422947343"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
+            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
             type="DEX" />
     </build>
 

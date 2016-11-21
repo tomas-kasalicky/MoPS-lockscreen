@@ -6,24 +6,29 @@
     a:gravity="center">
 
     <Button
+        a:id="@+id/sampleBtn"
+        a:text="Obfuscated sample"
+        a:layout_width="200dp"
+        a:layout_height="wrap_content" />
+    <Button
         a:id="@+id/setupBtn"
         a:text="Setup Lock"
-        a:layout_width="wrap_content"
+        a:layout_width="200dp"
         a:layout_height="wrap_content" />
     <Button
         a:id="@+id/browseBtn"
         a:text="Browse images"
-        a:layout_width="wrap_content"
+        a:layout_width="200dp"
         a:layout_height="wrap_content" />
     <Button
         a:id="@+id/lockBtn"
         a:text="Lock Device"
-        a:layout_width="wrap_content"
+        a:layout_width="200dp"
         a:layout_height="wrap_content" />
     <Button
         a:id="@+id/lockObfBtn"
-        a:text="Lock With Obfuscated Pictures"
-        a:layout_width="wrap_content"
+        a:text="Lock Obfuscated"
+        a:layout_width="200dp"
         a:layout_height="wrap_content" />
 
 </LinearLayout>

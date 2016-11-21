@@ -49,6 +49,14 @@ public class StartupActivity extends Activity {
                 browse();
             }
         });
+
+        Button sampleButton = (Button) findViewById(R.id.sampleBtn);
+        sampleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sample();
+            }
+        });
     }
 
     private void setup() {
@@ -58,6 +66,13 @@ public class StartupActivity extends Activity {
 
     private void browse() {
         Intent intent = new Intent(this, BrowseActivity.class);
+        startActivity(intent);
+    }
+
+
+    private void sample() {
+        Intent intent = new Intent(this, BrowseActivity.class);
+        intent.putExtra("sample", true);
         startActivity(intent);
     }
 

@@ -32,12 +32,12 @@
         "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\bmw_obf.jpg"
     },
     {
-        "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\coffee3.jpg",
-        "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\coffee3.jpg"
-    },
-    {
         "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\pizza_obf.jpg",
         "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\pizza_obf.jpg"
+    },
+    {
+        "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\coffee3.jpg",
+        "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\coffee3.jpg"
     },
     {
         "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\coffee1_obf.jpg",
@@ -50,10 +50,6 @@
     {
         "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\pizza1_obf.jpg",
         "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\pizza1_obf.jpg"
-    },
-    {
-        "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\roses2_obf.jpg",
-        "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\roses2_obf.jpg"
     },
     {
         "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\bmw2_obf.jpg",
@@ -78,10 +74,6 @@
     {
         "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\bmw.jpg",
         "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\bmw.jpg"
-    },
-    {
-        "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\roses2.jpg",
-        "source": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\src\\main\\res\\drawable-nodpi\\roses2.jpg"
     },
     {
         "merged": "C:\\Users\\kasal\\OneDrive\\GitHub\\MoPS-lockscreen\\LockScreenApp\\app\\build\\intermediates\\res\\merged\\debug\\drawable-nodpi-v4\\coffee_obf.jpg",
