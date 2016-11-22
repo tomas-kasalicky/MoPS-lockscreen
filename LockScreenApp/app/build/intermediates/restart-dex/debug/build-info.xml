@@ -5,7 +5,7 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="3331541009861"
+    timestamp="44958118841999"
     token="997996261963478444"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -23,45 +23,28 @@
         duration="0" />
 
     <build
-        timestamp="1726404575895"
+        timestamp="43725564573586"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="2217411872097"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="3210912527690"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
-        <artifact
-            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="3287958261843"
+        timestamp="44740870487610"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_3\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="3331541009861"
-        verifier="COLD_SWAP_REQUESTED" />
-    <build
-        timestamp="6220788416971"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="44810563020347"
+        verifier="FIELD_TYPE_CHANGE" >
         <artifact
-            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
             type="DEX" />
     </build>
+    <build
+        timestamp="44958118841999"
+        verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

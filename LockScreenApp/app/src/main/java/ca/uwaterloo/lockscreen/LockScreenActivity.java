@@ -78,9 +78,6 @@ public class LockScreenActivity extends Activity implements
 			}
 
 		}
-
-
-
 	}
 
 
@@ -178,11 +175,12 @@ public class LockScreenActivity extends Activity implements
 
 	// Unlock home button and wait for its callback
 	public void unlockHomeButton() {
-        // remove overlay
-        this.winManager.removeView(this.wrapperView);
-        this.wrapperView.removeAllViews();
-
-        mLockscreenUtils.unlock();
+		try {
+			// remove overlay
+			this.winManager.removeView(this.wrapperView);
+			this.wrapperView.removeAllViews();
+        	mLockscreenUtils.unlock();
+		}catch(Exception ex){}
 	}
 
 	// Simply unlock device when home button is successfully unlocked
