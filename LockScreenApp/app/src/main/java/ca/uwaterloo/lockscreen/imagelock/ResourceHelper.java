@@ -19,7 +19,7 @@ public class ResourceHelper {
     public static List<ImagePrototype> createPrototypes(Resources res, Activity act){
         List<ImagePrototype> prototypes = new ArrayList<>();
 
-        ImagePrototype prot = new ImagePrototype(
+        /*ImagePrototype prot = new ImagePrototype(
                 new ObfuscatedImagePair[]{
                         new ObfuscatedImagePair(res, R.drawable.pizza,R.drawable.pizza_obf),
                         new ObfuscatedImagePair(res, R.drawable.pizza1,R.drawable.pizza1_obf),
@@ -95,7 +95,147 @@ public class ResourceHelper {
                     R.drawable.roses_obf,
                     R.drawable.roses1_obf,
             });
-        prototypes.add(prot);
+        prototypes.add(prot);*/
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.bats_0,
+                        R.drawable.bats_1,
+                        R.drawable.bats_2,
+                },
+                new int[]{
+                        R.drawable.bats_0o,
+                        R.drawable.bats_1o,
+                        R.drawable.bats_2o,
+                }));
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.berries_0,
+                        R.drawable.berries_1,
+                        R.drawable.berries_2,
+                },
+                new int[]{
+                        R.drawable.berries_0o,
+                        R.drawable.berries_1o,
+                        R.drawable.berries_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.dancing_0,
+                        R.drawable.dancing_1,
+                        R.drawable.dancing_2,
+                },
+                new int[]{
+                        R.drawable.dancing_0o,
+                        R.drawable.dancing_1o,
+                        R.drawable.dancing_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.doll_0,
+                        R.drawable.doll_1,
+                        R.drawable.doll_2,
+                },
+                new int[]{
+                        R.drawable.doll_0o,
+                        R.drawable.doll_1o,
+                        R.drawable.doll_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.ghosts_0,
+                        R.drawable.ghosts_1,
+                        R.drawable.ghosts_2,
+                },
+                new int[]{
+                        R.drawable.ghosts_0o,
+                        R.drawable.ghosts_1o,
+                        R.drawable.ghosts_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.pie_0,
+                        R.drawable.pie_1,
+                        R.drawable.pie_2,
+                },
+                new int[]{
+                        R.drawable.pie_0o,
+                        R.drawable.pie_1o,
+                        R.drawable.pie_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.pig_0,
+                        R.drawable.pig_1,
+                        R.drawable.pig_2,
+                },
+                new int[]{
+                        R.drawable.pig_0o,
+                        R.drawable.pig_1o,
+                        R.drawable.pig_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.potatoes_0,
+                        R.drawable.potatoes_1,
+                        R.drawable.potatoes_2,
+                },
+                new int[]{
+                        R.drawable.potatoes_0o,
+                        R.drawable.potatoes_1o,
+                        R.drawable.potatoes_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.prison_0,
+                        R.drawable.prison_1,
+                        R.drawable.prison_2,
+                },
+                new int[]{
+                        R.drawable.prison_0o,
+                        R.drawable.prison_1o,
+                        R.drawable.prison_2o,
+                }));
+
+
+        prototypes.add(new ImagePrototype(res,
+                ImagePrototype.DROP_AREA.NONE,
+                new int[]{
+                        R.drawable.rain_0,
+                        R.drawable.rain_1,
+                        R.drawable.rain_2,
+                },
+                new int[]{
+                        R.drawable.rain_0o,
+                        R.drawable.rain_1o,
+                        R.drawable.rain_2o,
+                }));
+
+
 
         prototypes = ApplyPreferences(prototypes, act);
 
