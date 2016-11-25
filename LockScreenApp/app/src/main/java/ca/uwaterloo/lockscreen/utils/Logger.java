@@ -9,6 +9,7 @@ import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Calendar;
 
 /**
  * Created by kasal on 21.11.2016.
@@ -35,7 +36,7 @@ public class Logger {
         try
         {
             BufferedWriter buf = new BufferedWriter(new FileWriter(logFile, true));
-            buf.append(message);
+            buf.append( Calendar.getInstance().getTime().toString() + ":" + message);
             buf.newLine();
             buf.flush();
             buf.close();

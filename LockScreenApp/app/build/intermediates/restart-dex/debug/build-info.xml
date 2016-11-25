@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="23"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="188233610654994"
+    timestamp="6547990958115"
     token="997996261963478444"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="840" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="737" />
+        duration="0" />
     <task
         name="verifier"
-        duration="172" />
+        duration="0" />
 
     <artifact
         location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="188233610654994"
+        timestamp="6547990958115"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\kasal\OneDrive\GitHub\MoPS-lockscreen\LockScreenApp\app\build\outputs\apk\app-debug.apk"
